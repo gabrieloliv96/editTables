@@ -48,68 +48,62 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Row(
         children: [
-          Flexible(
-            child: ListView.builder(
-              padding: const EdgeInsets.all(8),
-              itemCount: entries.length,
-              scrollDirection: Axis.vertical,
-              shrinkWrap: true,
-              itemBuilder: (BuildContext context, int index) {
-                return Card(
-                  // height: 50,
-                  margin: EdgeInsets.all(15.0),
-                  color: Colors.amber[colorCodes[index]],
-                  child: ListTile(
-                    title: Text(
-                      'Entry ${entries[index]}',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 25),
-                    ),
-                    // onTap: _editNumber,
-                  ),
-                );
-              },
-            ),
+          Column(
+            children: [
+              Flexible(
+                child: ListView.builder(
+                  padding: const EdgeInsets.all(8),
+                  itemCount: entries.length,
+                  scrollDirection: Axis.vertical,
+                  shrinkWrap: true,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Card(
+                      // height: 50,
+                      margin: EdgeInsets.all(15.0),
+                      color: Colors.amber[colorCodes[index]],
+                      child: ListTile(
+                        title: Text(
+                          'Entry ${entries[index]}',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 25),
+                        ),
+                        // onTap: _editNumber,
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
           ),
-          Flexible(
-            child: ListView.builder(
-              padding: const EdgeInsets.all(8),
-              itemCount: entries.length,
-              shrinkWrap: true,
-              scrollDirection: Axis.vertical,
-              itemBuilder: (BuildContext context, int index) {
-                return Card(
-                  // height: 50,
-                  margin: EdgeInsets.all(15.0),
-                  color: Colors.amber[colorCodes[index]],
-                  child: ListTile(
-                    title: Text(
-                      'Entry ${entries[index]}',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 25),
-                    ),
-                    // onTap: _editNumber,
-                  ),
-                );
-              },
-            ),
+          Column(
+            children: [
+              Flexible(
+                child: ListView.builder(
+                  padding: const EdgeInsets.all(8),
+                  itemCount: entries.length,
+                  shrinkWrap: true,
+                  scrollDirection: Axis.vertical,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Card(
+                      // height: 50,
+                      margin: EdgeInsets.all(15.0),
+                      color: Colors.amber[colorCodes[index]],
+                      child: ListTile(
+                        title: Text(
+                          'Entry ${entries[index]}',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 25),
+                        ),
+                        // onTap: _editNumber,
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
           ),
         ],
       ),
-      // Center(
-      //   child: Column(
-      //     mainAxisAlignment: MainAxisAlignment.center,
-      //     children: <Widget>[
-      //       const Text(
-      //         'You have pushed the button this many times:',
-      //       ),
-      //       Text(
-      //         '$_counter',
-      //         style: Theme.of(context).textTheme.headline4,
-      //       ),
-      //     ],
-      //   ),
-      // ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
